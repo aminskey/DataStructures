@@ -1,6 +1,10 @@
 #ifndef LINKEDLIST_LIB_H
 #define LINKEDLIST_LIB_H
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <ncurses.h>
+
 struct node {
 	int id;
 	char *name;
@@ -15,5 +19,7 @@ extern struct node *searchNode();
 
 extern int length();
 extern int removeNode();
+
+extern void printList();
 
 #endif

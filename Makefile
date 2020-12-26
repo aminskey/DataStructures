@@ -1,3 +1,3 @@
 all:
-	gcc src/*.c linkedlist.c -Idslibs -lncurses -o linkedlist
+	gcc src/*.c linkedlist.c -Idslibs -Iglibs -lncurses -o linkedlist
 

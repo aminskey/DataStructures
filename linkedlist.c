@@ -1,21 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <linkedlist.h>
 #include <ncurses.h>
 #include <strings.h>
 #include <string.h>
 #include <unistd.h>
 
-char ch;
-short p;
-
-
-void printList(WINDOW *);
-void wpaint(WINDOW *, char, short);
-void outlinew(WINDOW *, short);
-
-#define paint(ch, p) wpaint(stdscr, ch, p)
-#define outline(p) outlinew(stdscr, p)
+#include <linkedlist.h>
+#include <graphics.h>
 
 int main(int argc, char *argv[]){
 
@@ -54,6 +45,15 @@ int main(int argc, char *argv[]){
         head = newNode(1, "head");
 
 	struct node *srch, *temp;
+
+
+	wattron(output, COLOR_PAIR(1));
+
+	mvwprintw(output, i, 1, "search [id] - find node by id\n remove [id] - remove node by id\n add-node [id][name] - create node\n length - find length of list\n clear (both - input - output) - clear window \n exit - exit list\n help - get help\n");
+	i+=8;
+
+	wattroff(output, COLOR_PAIR(1));
+	wrefresh(output);
 
 	echo();
 	while(1){
@@ -102,6 +102,7 @@ int main(int argc, char *argv[]){
 			if(!strcmp(arg2, "input")){
 				wclear(input);
 				i=0;
+				j=0;
 			}
 			if(!strcmp(arg2,"output")){
 				wclear(output);
@@ -111,6 +112,7 @@ int main(int argc, char *argv[]){
 				wclear(input);
 				wclear(output);
 				i=0;
+				j=0;
 			}
 
 		}
@@ -129,27 +131,4 @@ int main(int argc, char *argv[]){
 	}
 	endwin();
         return 0;
-}
-void printList(WINDOW *win){
-	struct node *current = head;
-
-	for(int i=0; current != NULL; i++){
-		mvwprintw(win,i,1,"Node %s : %d", current -> name, current -> id);
-		current = current -> next;
-	}
-}
-void wpaint(WINDOW *win, char c, short pair){
-	wattron(win, COLOR_PAIR(pair));
-	for(int i=0;i<getmaxy(win);i++)
-		for(int j=0;j<getmaxx(win);j++)
-			mvwprintw(win,i,j,"%c",c);
-
-	wattron(win, COLOR_PAIR(pair));
-	wrefresh(win);
-}
-void outlinew(WINDOW *win, short pair){
-	wattron(win, COLOR_PAIR(pair));
-	box(win,0,0);
-	wattroff(win, COLOR_PAIR(pair));
-	wrefresh(win);
 }
