@@ -1,3 +1,6 @@
+#ifndef LINKEDLIST_LIB_H
+#define LINKEDLIST_LIB_H
+
 struct node {
 	int id;
 	char *name;
@@ -12,3 +15,5 @@ extern struct node *searchNode();
 
 extern int length();
 extern int removeNode();
+
+#endif
