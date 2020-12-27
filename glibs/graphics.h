@@ -7,11 +7,12 @@
 
 char ch;
 short p;
+char *s;
 
 extern void wpaint();
 extern void outlinew();
 
 #define paint(ch, p) wpaint(stdscr, ch, p)
-#define outline(p) outlinew(stdscr, p);
+#define outline(p, s) outlinew(stdscr, p, s);
 
 #endif

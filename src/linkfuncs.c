@@ -1,5 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ncurses.h>
 
 struct node {
 	int id;
@@ -85,4 +86,12 @@ int removeNode(int id){
         }
 
         return -1;
+}
+void printList(WINDOW *win){
+        struct node *current = head;
+
+        for(int i=0; current != NULL; i++){
+                mvwprintw(win,i,1,"Node %s : %d", current -> name, current -> id);
+                current = current -> next;
+        }
 }
