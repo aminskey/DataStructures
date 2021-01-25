@@ -8,6 +8,7 @@
 struct node {
 	int id;
 	char *name;
+	char *des;
 	struct node *next;
 };
 
@@ -16,6 +17,7 @@ extern struct node *lastNode();
 extern struct node *newNode();
 extern struct node *addNode();
 extern struct node *searchNode();
+extern struct node *insertNode();
 
 extern int length();
 extern int removeNode();

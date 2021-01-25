@@ -1,18 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ncurses.h>
+#include <string.h>
 
 struct node {
 	int id;
 	char *name;
+	char *des;
 	struct node *next;
 };
 
 int length(struct node*);
 
 struct node *lastNode();
-struct node *newNode(int, char *);
-struct node *addNode(int, char *);
+struct node *newNode(int, char *, char *);
+struct node *addNode(int, char *, char *);
 struct node *searchNode(int);
 
 struct node *head = NULL;
@@ -40,20 +42,22 @@ struct node *lastNode(){
 
 }
 
-struct node *newNode(int id, char* name){
+struct node *newNode(int id, char* name, char *des){
+
 	struct node *temp = NULL;
 	temp = malloc(sizeof(struct node));
 	temp -> id = id;
 	temp -> name = name;
+	temp -> des = des;
 	temp -> next = NULL;
 
 	return temp;
 }
 
 
-struct node *addNode(int id, char *name){
+struct node *addNode(int id, char *name, char *des){
 	struct node *prevNode = lastNode();
-	struct node *thisNode = newNode(id, name);
+	struct node *thisNode = newNode(id, name, des);
 	prevNode -> next = thisNode;
 	thisNode -> next = NULL;
 	return thisNode;
@@ -69,7 +73,7 @@ struct node *searchNode(int nodeId){
 		}
 		temp = temp -> next;
 	}
-	return newNode(-1,"Node not found");
+	return newNode(-1,"Node not found", "seriously");
 }
 int removeNode(int id){
         struct node *temp = head;
@@ -94,4 +98,13 @@ void printList(WINDOW *win){
                 mvwprintw(win,i,1,"Node %s : %d", current -> name, current -> id);
                 current = current -> next;
         }
+}
+
+struct node *insertNode(int id, char *name, int prev, char *des){
+        struct node *prevNode = searchNode(prev);
+        struct node *thisNode = newNode(id, name, des);
+
+        thisNode -> next = prevNode -> next;
+        prevNode -> next = thisNode;
+        return thisNode;
 }
