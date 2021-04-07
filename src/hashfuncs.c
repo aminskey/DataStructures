@@ -51,3 +51,17 @@ void display(){
         }
 }
 
+
+item *search(int key){
+        int index = hash(key);
+
+        while(hashTable[index] != NULL){
+                if(hashTable[index] -> key == key)
+                        return hashTable[index];
+
+                index++;
+                index %= SIZE;
+        }
+        return NULL;
+}
+
