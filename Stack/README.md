@@ -35,7 +35,7 @@ Well you have
 _etc._  
 **Just kidding**
 
-These are the types of stacks there are (OR THOSE THAT I KNOW OF)
+These are the types of stacks there are (or those i know of)
 
 	1. Linkedlist stacks
 	2. Array Stacks
@@ -47,8 +47,13 @@ Yup
 	
 	Arrays don't take up memory space, as compared to Linked lists.
 	But the major issue is that it has limited space.
+	When Exceeding the limit an overflow happens.
+	As to when there are no nodes, it is called an underflow
 
 **Linked List:**
 
 	As Compared to arrays. The linked list is dynamic but takes up a lot of memory space
-	
+	The Same thing applies here except for the overflow.
+
+**For more reference**
+[Link](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/)
