@@ -1,2 +1,2 @@
 all:
-	gcc src/*.c main.c -Ilibs/ -o stack
+	gcc src/*.c main.c -Ilibs/ -o ~/DataStructures/bin/stack
