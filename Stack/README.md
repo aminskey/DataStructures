@@ -27,18 +27,18 @@ Programs like **Towers of Hanoi, and others that i haven't heard of** use this c
 
 ## What kind of stacks are there??
 
-### Well you have
+Well you have
 
-1. Hay stacks 
-2. Paper stacks
-3. Plate stacks
+	1. Hay stacks 
+	2. Paper stacks
+	3. Plate stacks
 _etc._  
 **Just kidding**
 
-### These are the types of stacks there are (OR THOSE THAT I KNOW OF)
+These are the types of stacks there are (OR THOSE THAT I KNOW OF)
 
-1. Linkedlist stacks
-2. Array Stacks
+	1. Linkedlist stacks
+	2. Array Stacks
 
 ## Are There any Pros and Cons??
 Yup  
