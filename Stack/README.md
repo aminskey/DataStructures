@@ -37,7 +37,7 @@ _etc._
 
 These are the types of stacks there are (or those i know of)
 
-	1. Linkedlist stacks
+	1. Linked list stacks
 	2. Array Stacks
 
 ## Are There any Pros and Cons??
@@ -54,6 +54,11 @@ Yup
 
 	As Compared to arrays. The linked list is dynamic but takes up a lot of memory space
 	The Same thing applies here except for the overflow.
+
+## The kind of stack i'm using right now
+Right now this repo consists of linked list stacks.  
+Though I do plan of making a seperate directory for array stacks,  
+but that's not my main focus. Now i'm going to focus on Queues
 
 **For more reference**
 [Link](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/)
