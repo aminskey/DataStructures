@@ -3,8 +3,8 @@ I have decided to increase my programming knowledge
 by diving deep into some of the basics of programming.    
 Like my father always said:     
     
-__**"To be a good programmer.    
-You must ace data structures and algorithms"**__    
+_**"To be a good programmer.    
+You must ace data structures and algorithms"**_    
     
 That was like months ago, even this repo's pretty old.    
 But I have decided to start from start.    
