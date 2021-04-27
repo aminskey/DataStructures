@@ -60,5 +60,5 @@ Right now this repo consists of linked list stacks.
 Though I do plan of making a seperate directory for array stacks,  
 but that's not my main focus. Now i'm going to focus on Queues
 
-**For more reference**
-[Link](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/)
+**For more reference**  
+[Geeksforgeeks](https://www.geeksforgeeks.org/stack-data-structure-introduction-program/)
